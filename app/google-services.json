@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "703701477133",
+    "project_id": "repulojegy-mobilapp",
+    "storage_bucket": "repulojegy-mobilapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703701477133:android:6432b734e638adafb3b244",
+        "android_client_info": {
+          "package_name": "com.example.mobilak_p"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhv9FWFgE2HtT9gFHju247e6XRbbYXIsg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
