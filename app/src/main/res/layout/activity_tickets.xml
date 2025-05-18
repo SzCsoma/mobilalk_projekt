@@ -8,46 +8,67 @@
     tools:context=".TicketsActivity"
     android:padding="16dp">
 
-
     <TextView
         android:id="@+id/titleTickets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="132dp"
-        android:layout_marginEnd="148dp"
         android:text="Jegyeim"
         android:textColor="@color/text_color"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/scanQrButton"
+        android:layout_marginTop="64dp"
+        app:layout_constraintBottom_toBottomOf="@+id/scanQrButton"
+        app:layout_constraintVertical_bias="0" />
 
     <Button
         android:id="@+id/buttonBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
         android:text="Vissza"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/scanQrButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QR kód beolvasása"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonBack"
+        android:layout_marginEnd="8dp" />
 
     <TextView
         android:id="@+id/ticketMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="280dp"
-        android:gravity="center"
         android:text="Jelenleg nincsen jegye."
-        android:textAlignment="center"
-        android:textColor="@color/text_color"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        android:textColor="@color/text_color"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/titleTickets"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <ScrollView
+        android:id="@+id/ticketScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/scanQrButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:id="@+id/ticketListLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="32dp" />
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

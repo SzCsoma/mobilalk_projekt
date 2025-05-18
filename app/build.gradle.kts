@@ -49,4 +49,5 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation("com.google.firebase:firebase-firestore:24.9.0")
+    implementation("com.journeyapps:zxing-android-embedded:4.3.0")
 }

@@ -3,6 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.mobilak_p">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -34,6 +40,9 @@
         <activity
             android:name=".HomeActivity"
             android:exported="false" />
-    </application>
+        <activity android:name=".LogoutActivity" />
+        <receiver android:name=".PromoNotificationReceiver" />
 
+    </application>
+    <uses-permission android:name="android.permission.CAMERA" />
 </manifest>
